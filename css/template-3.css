@@ -21,6 +21,7 @@ body{
     --secondery-color:#2C4755;
     --transparent-color:rgb(15,116,143,50%);
     --facebook-color:#1877F2;
+    --youtube-color:red;
     --twitter-color:#2AA9E0 ;
     --linkedin-color:#014588 ;
     --overlay-color: rgb(0, 0, 0, .7);
@@ -249,6 +250,12 @@ body{
     font-size: 22px;
     line-height: 1.7;
 }
+@media (max-width: 767px){
+  .landing .container .text p{
+    max-width: 70%;
+  }
+}
+
 .landing .container .image{
     animation-name: move-top-bottom;
     animation-duration: 4s;
@@ -1008,9 +1015,22 @@ margin: 15px 0;
 .events .container .content .info{
   flex: 1;
 }
+@media (max-width: 767px) {
+  .events .container .content .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .events .container .content .info .time{
   display: flex;
   justify-content: center;
+}
+@media (max-width: 767px) {
+  .events .container .content .info .time{
+    flex-wrap: wrap;
+    row-gap:20px ;
+  }
 }
 .events .container .content .info .time .unit{
   border: 1px solid #d5d5d5;
@@ -1056,6 +1076,12 @@ margin: 15px 0;
   text-align: center;
   padding: 50px;
 }
+@media (max-width: 767px) {
+  .events .container .content .info .text{
+    padding: 50px 0;
+    max-width: 70%;
+  }
+}
 .events .container .content .info h2{
   font-weight: 800;
   font-size: 30px;
@@ -1081,6 +1107,7 @@ margin: 15px 0;
 @media (max-width: 767px) {
   .events .container .content .info .subscribe form{
     flex-direction: column;
+    max-width: 80%;
   }
   .events .container .content .info .subscribe form input[type="email"]{
     border-radius: 0px;
@@ -1693,7 +1720,7 @@ margin-top: 10px;
   width: 20px;
   height:  20px;
   background-color: var(--main-color);
-  right: -30%;
+  right: -15%;
   top: 50%;
   transform: translatey(-50%);
   border-radius: 50%;
@@ -1728,7 +1755,7 @@ margin-top: 10px;
   width: 20px;
   height:  20px;
   background-color: var(--main-color);
-  left: -30%;
+  left: -15%;
   top: 50%;
   transform: translatey(-50%);
   border-radius:50%;
